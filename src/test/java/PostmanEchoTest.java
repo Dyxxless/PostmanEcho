@@ -11,14 +11,14 @@ public class PostmanEchoTest {
         // Предусловия
         given()
                 .baseUri("https://postman-echo.com")
-                .body("111") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("Test passed again") // отправляемые данные (заголовки и query можно выставлять аналогично)
                 // Выполняемые действия
                 .when()
                 .post("/post")
                 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("222"))
+                .body("data", equalTo("Test passed again"))
         ;
     }
 }
